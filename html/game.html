@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>博雅游戏</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1, user-scalable=no">
+
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<style type="text/css">
+		.navbar {
+		    min-height: 58px;
+		    margin-bottom: 0px;
+		}
+		.navbar-inverse {
+    		background-color: #191d3a;
+		}
+		.navbar-nav li a {
+		    padding-top: 10px;
+		    padding-bottom: 10px;
+		    line-height: 38px;
+		}
+		.btn{
+			margin-top: 12px;
+		}
+		.navbar-inverse .navbar-right li a:hover {
+    		color: #38b774;
+		}
+		.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    		color: #fff;
+   			background-color: #252947;
+		}
+		.carousel-inner>.item>img {
+    		height: 460px;
+		}
+		.navbar-default {
+			border-radius: 0;
+		}
+		@media only screen and (max-width: 1024px){
+			.font{
+				display: none;
+			}
+		}
+		.two{
+			width: 100%;
+			height: 254px;
+			padding: 0;
+			background: url(../img/gamebanner.jpg) repeat-x center top;
+		}
+		@media only screen and (max-width: 1024px){
+			.two{
+				display: none;
+			}
+		}
+		.three{
+			width: 1000px;
+			margin: 0px auto;
+		}
+		.r1{
+			width: 100%;
+			padding: 10px 0;
+			border-bottom: 1px solid #c7d6e5;
+			/*background: green;*/
+		}
+		.c1 h2{
+			height: 29px;
+			padding-left: 30px;
+			line-height: 29px; 
+			font-weight: bold;
+			font-size: 20px;
+			background: url(../img/location.png) no-repeat 0 -94px;
+		}
+		.c2{
+			height: 100%;
+			margin-top: 20px;
+			margin-right: -45px;
+		}
+		.c2 a{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			background: url(../img/home.png) no-repeat center 6px;
+		}
+		.c2 i{
+			display: inline-block;
+			width: 4px;
+			height: 8px;
+			margin: 2px 7px;
+			background: url(../img/icon.png) no-repeat 0 -150px;
+		}
+		.c2 span{
+			color: #444866;
+		}
+		.four{
+			padding-top: 40px;
+			clear: both;
+			position: relative;
+		}
+		.r2{
+			width: 195px;
+			float: left;
+		}
+		.r2 .col-md-12{
+			border-bottom: 1px solid #cad6e1;
+			margin-left: -15px;
+		}
+		.c3{
+			background: url(../img/arrow.png) no-repeat right center;
+		}
+
+		.r2 a{
+			display: block;
+		    padding-left: 52px;
+		    height: 80px;
+		    font: 1.333em/80px Arial;
+		    width: 143px;
+		    position: relative;
+		    text-decoration: none;
+		    color: #444866;
+		}
+		.c3 a{
+			color: #38b774;
+		}
+		.r2 i{
+			position: absolute;
+		    left: 0;
+		    top: 23px;
+		    height: 41px;
+		    width: 34px;
+		    background: url(../img/pad.png) no-repeat;
+		}
+		.c3 i{
+			background-position: -125px 0;
+		}
+		.c4 i{
+			background-position: -4px -97px;
+		}
+		.c5 i{
+			background-position: 0 -199px;
+		}
+		.c6 i{
+			background-position: 0 -295px;
+		}
+		.c7 i{
+			background-position: 0 -602px;
+		}
+		.r2 .c4:hover a{
+			color: #38b774;
+		}
+		.r2 .c4:hover i{
+			background-position: -124px -97px; 
+		}
+		.r2 .c5:hover a{
+			color: #38b774;
+		}
+		.r2 .c5:hover i{
+			background-position: -121px -199px; 
+		}
+		.r2 .c6:hover a{
+			color: #38b774;
+		}
+		.r2 .c6:hover i{
+			background-position: -120px -295px; 
+		}
+		.r2 .c7:hover a{
+			color: #38b774;
+		}
+		.r2 .c7:hover i{
+			background-position: -43px -602px; 
+		}
+		.r3{
+			margin-bottom: 40px;
+		}
+		.r3 .label{
+			padding: 10px;
+			background: #f7f7f7;
+			float: left;
+		}
+		.col-md-10{
+			width: 82%;
+		}
+		.label:hover{
+			background: #fff;
+		}
+		@media (min-width: 992px){
+			.col-md-4 {
+			    width: 38.3%;
+			    margin-left: 13px;
+			    padding-top: 10px; 
+			    padding-bottom: 13px;
+			}
+		}
+		.label h3{
+			height: 50px;
+			line-height: 50px;
+			margin-top: 0;
+		    font-weight: normal;
+		    font-size: 18px;
+		}
+		.label a:hover{
+			color: #38b774;
+		}
+		.doudiz{
+			padding-right: 1.166em;
+		    font-size: 12px;
+		    font-family: Arial;
+		    color: #38b774;
+		    background: url(../img/arrow.png) no-repeat right center;
+		    text-transform: uppercase;
+		    margin-left: 4px;
+		}
+		.thumbnail a>img, .thumbnail>img{
+			width: 331px;
+    		height: 195px;
+		}
+		.box{
+			height: 36px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		.imgfoot{
+			float: left;
+		    height: 36px;
+		    border-right: 1px solid #c7d6e5;
+		    width: 169px;
+		    text-align: center;
+		}
+		.box a{
+			display: inline-block;
+			vertical-align: top;
+		    height: 36px;
+		    line-height: 36px;
+		    padding-left: 40px;
+		    font-size: 15px;
+		    font-family: Arial;
+		    text-decoration: none;
+		    color: #444866;
+		}
+		.imgfoot a{
+			background: url(../img/icon.png) no-repeat 0 -347px;
+		}
+		.erwma{
+			position: relative;
+		}
+		.erwma a{
+			background: url(../img/icon.png) no-repeat 0 -448px;
+		}
+		.erwma p{
+			position: absolute;
+			top: -125px;
+			left: -48px;
+			box-shadow: 0px 3px 10px 2px #ECECEC; 
+			display: none;
+		}
+		.erwma:hover p{
+			display: block;
+		}
+		.footradius{
+			border-radius: 0;
+		}
+		.footNav .row{
+			line-height: 50px;
+		}
+		.footNav a{
+			color: #6c6e7e;
+			text-decoration: none;
+		}
+		.footNav .row{
+			color: #6c6e7e;
+		}
+		.footNav a:hover{
+			color: #fff;
+		}
+		.footNav img{
+			width: 36px;
+			height: 50px;
+		}
+		.top{
+			border-radius: 5px;
+			border:none;
+			width: 68px;
+			height: 29px;
+			position: fixed;
+			bottom: 75px;
+			right: 15px;
+			z-index: 10;
+			background: #C7D6E5;
+			color: #fff;
+			outline: none;
+		}
+		.top span{
+			padding: 0 5px;
+		}
+		.top:hover{
+			background: #38B774;
+		}		
+		.phone{
+			color: #444866;
+		    font-weight: normal;
+		    display: none;  
+		}
+		/*.Chani{
+			margin-left: 100px;
+		}*/
+		@media only screen and (max-width: 1024px){
+			.three{
+				width: 100%;
+			}
+		}
+		@media only screen and (max-width: 1024px){
+			.r1{
+				display: none;
+			}
+			.r2{
+				display: none;
+			}
+			.Chani{
+				margin-left: 0;
+			}
+			.box{
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			.box span{
+				display: none;
+			}
+			.phone{
+				display: block;
+			}
+			.label{
+				width: 110%;
+			    height: auto;
+			    margin: 0px auto;
+			    margin-left: 3%;
+			    margin-right: 3%;
+			    box-sizing: border-box;
+			    margin-bottom: 30px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse">
+  		<div class="container">
+	   		<div class="navbar-header">
+	     		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      	</button>
+		      	<a class="navbar-brand" href="#"><img src="../img/logo.png"></a>
+	    	</div>
+
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      	<ul class="nav navbar-nav font">
+			        <li class="active height720"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+			        <li><a href="#">博雅游戏</a></li>
+			        <li><a href="#">博雅新闻</a></li>
+			        <li><a href="#">关于我们</a></li>
+			        <li><a href="#">客服中心</a></li>
+			        <li><a href="#">投资者关系</a></li>
+			        <button type="button" class="btn btn-success">加入我们</button>
+		      	</ul>
+		      	<ul class="nav navbar-nav navbar-right">
+		        	<li><a href="#" style="color: #38b774;">中文</a></li>
+		        	<li><a href="#">EN</a></li>
+		     	</ul>
+		    </div>
+		</div>
+	</nav>
+	<div class="container two"></div>
+	<div class="container three">
+		<div class="row r1">
+			<div class="col-md-2 c1">
+				<h2 class="game-h2">博雅游戏</h2>
+			</div>
+			<div class="col-md-2 pull-right c2">
+				<a href=""></a>
+				<i></i>
+				<span>博雅游戏</span>
+			</div>
+		</div>
+		<div class="container three four">
+			<div class="row r2 ">
+				<div class="col-md-12 c3">
+					<a href="">iPhone</a>
+					<i></i>
+				</div>
+				<div class="col-md-12 c4">
+					<a href="">Android</a>
+					<i></i>
+				</div>
+				<div class="col-md-12 c5">
+					<a href="">iPad</a>
+					<i></i>
+				</div>
+				<div class="col-md-12 c6">
+					<a href="">PC</a>
+					<i></i>
+				</div>
+				<div class="col-md-12 c7">
+					<a href="">TV</a>
+					<i></i>
+				</div>
+			</div>
+			<div class="col-md-10">
+			  	<div class="col-sm-6">
+			   	 	<div class="thumbnail label">
+			   	 		<h3 class="h3">
+			   	 			<a href="" style="text-decoration: none;color: #444866;">斗地主</a>
+			   	 			<span class="doudiz">landlords</span>
+			   	 		</h3>
+				      	<img src="../img/gamepic3.jpg">
+				      	<div class="box">
+				        	<span class="imgfoot">
+				        		<a href="">App Store</a>
+				        	</span>
+				        	<span class="erwma">
+				        		<a href="">二维码下载</a>
+				        		<p><img src="../img/landlords116.png"></p>
+				        	</span>
+				        	<div class="block">
+				        		<h3 class="phone">四川麻将</h3>
+				        		<a href=""></a>
+				        	</div>	        	
+				      	</div>
+			    	</div>
+			  	</div>
+
+			  	<div class="col-sm-6">
+			   	 	<div class="thumbnail label">
+			   	 		<h3>
+			   	 			<a href="" style="text-decoration: none;color: #444866;">麻将全集</a>
+			   	 			<span class="doudiz">mahjong games</span>
+			   	 		</h3>
+				      	<img src="../img/gamepic15.jpg">
+				      	<div class="box">
+				        	<span class="imgfoot">
+				        		<a href="">App Store</a>
+				        	</span>
+				        	<span class="erwma">
+				        		<a href="">二维码下载</a>
+				        		<p><img src="../img/landlords116.png"></p>
+				        	</span>
+				        	<div class="block">
+				        		<h3 class="phone">四川麻将</h3>
+				        		<a href=""></a>
+				        	</div>	 
+				      	</div>
+			    	</div>
+			  	</div>
+
+			  	<div class="col-sm-6">
+			   	 	<div class="thumbnail label">
+			   	 		<h3>
+			   	 			<a href="" style="text-decoration: none;color: #444866;">四川麻将</a>
+			   	 			<span class="doudiz">sichuan mahjong</span>
+			   	 		</h3>
+				      	<img src="../img/gamepic2.jpg">
+				      	<div class="box">
+				        	<span class="imgfoot">
+				        		<a href="">App Store</a>
+				        	</span>
+				        	<span class="erwma">
+				        		<a href="">二维码下载</a>
+				        		<p><img src="../img/landlords116.png"></p>
+				        	</span>
+				        	<div class="block">
+				        		<h3 class="phone">四川麻将</h3>
+				        		<a href=""></a>
+				        	</div>	 
+				      	</div>
+			    	</div>
+			  	</div>
+
+			  	<div class="col-sm-6">
+			   	 	<div class="thumbnail label">
+			   	 		<h3>
+			   	 			<a href="" style="text-decoration: none;color: #444866;">四人斗地主</a>
+			   	 			<span class="doudiz">FOUR LANDLORDS</span>
+			   	 		</h3>
+				      	<img src="../img/gamepic6.jpg">
+				      	<div class="box">
+				        	<span class="imgfoot">
+				        		<a href="">App Store</a>
+				        	</span>
+				        	<span class="erwma">
+				        		<p><img src="../img/landlords116.png"></p>
+				        		<a href="">二维码下载</a>
+				        	</span>
+				        	<div class="block">
+				        		<h3 class="phone">四川麻将</h3>
+				        		<a href=""></a>
+				        	</div>	 
+				      	</div>
+			    	</div>
+			  	</div>
+
+			  	<div class="col-sm-6 Chain">
+			   	 	<div class="thumbnail label">
+			   	 		<h3>
+			   	 			<a href="" style="text-decoration: none;color: #444866;">中国象棋</a>
+			   	 			<span class="doudiz">chinese chess of boyaa</span>
+			   	 		</h3>
+				      	<img src="../img/gamepic10.jpg">
+				      	<div class="box">
+				        	<span class="imgfoot">
+				        		<a href="">App Store</a>
+				        	</span>
+				        	<span class="erwma">
+				        		<p><img src="../img/landlords116.png"></p>
+				        		<a href="">二维码下载</a>
+				        	</span>
+				        	<div class="block">
+				        		<h3 class="phone">四川麻将</h3>
+				        		<a href=""></a>
+				        	</div>	 
+				      	</div>
+			    	</div>
+			  	</div>
+			</div>
+			<div class="col-md-10">
+			  	<div class="col-sm-6">
+			   	 	<div class="thumbnail label">
+			   	 		<h3 class="h3">
+			   	 			<a href="" style="text-decoration: none;color: #444866;">斗地主</a>
+			   	 			<span class="doudiz">landlords</span>
+			   	 		</h3>
+				      	<img src="../img/gamepic3.jpg">
+				      	<div class="box">
+				        	<span class="imgfoot">
+				        		<a href="">App Store</a>
+				        	</span>
+				        	<span class="erwma">
+				        		<a href="">二维码下载</a>
+				        		<p><img src="../img/landlords116.png"></p>
+				        	</span>
+				        	<div class="block">
+				        		<h3 class="phone">四川麻将</h3>
+				        		<a href=""></a>
+				        	</div>	        	
+				      	</div>
+			    	</div>
+			  	</div>
+
+			  	<div class="col-sm-6">
+			   	 	<div class="thumbnail label">
+			   	 		<h3>
+			   	 			<a href="" style="text-decoration: none;color: #444866;">麻将全集</a>
+			   	 			<span class="doudiz">mahjong games</span>
+			   	 		</h3>
+				      	<img src="../img/gamepic15.jpg">
+				      	<div class="box">
+				        	<span class="imgfoot">
+				        		<a href="">App Store</a>
+				        	</span>
+				        	<span class="erwma">
+				        		<a href="">二维码下载</a>
+				        		<p><img src="../img/landlords116.png"></p>
+				        	</span>
+				        	<div class="block">
+				        		<h3 class="phone">四川麻将</h3>
+				        		<a href=""></a>
+				        	</div>	 
+				      	</div>
+			    	</div>
+			  	</div>
+
+			  	<div class="col-sm-6">
+			   	 	<div class="thumbnail label">
+			   	 		<h3>
+			   	 			<a href="" style="text-decoration: none;color: #444866;">四川麻将</a>
+			   	 			<span class="doudiz">sichuan mahjong</span>
+			   	 		</h3>
+				      	<img src="../img/gamepic2.jpg">
+				      	<div class="box">
+				        	<span class="imgfoot">
+				        		<a href="">App Store</a>
+				        	</span>
+				        	<span class="erwma">
+				        		<a href="">二维码下载</a>
+				        		<p><img src="../img/landlords116.png"></p>
+				        	</span>
+				        	<div class="block">
+				        		<h3 class="phone">四川麻将</h3>
+				        		<a href=""></a>
+				        	</div>	 
+				      	</div>
+			    	</div>
+			  	</div>
+
+			  	<div class="col-sm-6">
+			   	 	<div class="thumbnail label">
+			   	 		<h3>
+			   	 			<a href="" style="text-decoration: none;color: #444866;">四人斗地主</a>
+			   	 			<span class="doudiz">FOUR LANDLORDS</span>
+			   	 		</h3>
+				      	<img src="../img/gamepic6.jpg">
+				      	<div class="box">
+				        	<span class="imgfoot">
+				        		<a href="">App Store</a>
+				        	</span>
+				        	<span class="erwma">
+				        		<p><img src="../img/landlords116.png"></p>
+				        		<a href="">二维码下载</a>
+				        	</span>
+				        	<div class="block">
+				        		<h3 class="phone">四川麻将</h3>
+				        		<a href=""></a>
+				        	</div>	 
+				      	</div>
+			    	</div>
+			  	</div>
+
+			  	<div class="col-sm-6 Chain">
+			   	 	<div class="thumbnail label">
+			   	 		<h3>
+			   	 			<a href="" style="text-decoration: none;color: #444866;">中国象棋</a>
+			   	 			<span class="doudiz">chinese chess of boyaa</span>
+			   	 		</h3>
+				      	<img src="../img/gamepic10.jpg">
+				      	<div class="box">
+				        	<span class="imgfoot">
+				        		<a href="">App Store</a>
+				        	</span>
+				        	<span class="erwma">
+				        		<p><img src="../img/landlords116.png"></p>
+				        		<a href="">二维码下载</a>
+				        	</span>
+				        	<div class="block">
+				        		<h3 class="phone">四川麻将</h3>
+				        		<a href=""></a>
+				        	</div>	 
+				      	</div>
+			    	</div>
+			  	</div>
+			</div>
+		</div>
+	</div>	
+	<nav class="navbar navbar-inverse footradius">
+		<div class="container footNav">
+			<div class="row" style="margin-top:20px; ">
+				<a href="">网站地图</a>
+				<span>|</span>
+				<a href="">免责声明</a>
+				<span>|</span>
+				<a href="">监督举报</a>
+			</div>
+			<div class="row">
+				<p>
+					Copyright © 2004 - 2019 博雅互动(Boyaa Interactive)
+					<a href="">粤ICP备05062536号</a>
+				</p>
+			</div>
+			<div class="row">
+			<p>网络文化经营许可证：粤网文[2015]1991-405号 | 互联网出版许可证：新出网证（粤）字062号 | 增值电信业务经营许可证：粤B2-20110513 <a href=""><img src="../img/govIcon.gif"></a></p>
+			</div>
+		</div>
+	</nav>
+	<button class="top" type="submit"><span class="glyphicon glyphicon-triangle-top"></span>Top</button>
+</body>
+</html>
